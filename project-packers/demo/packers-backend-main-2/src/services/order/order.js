@@ -1,0 +1,102 @@
+import { auth, checkAccess, checkRole } from '../middlewares';
+import { chartData, getAllOrders, getCustomer, getOverView, getSingleOrder, getUserOrder, orderFail, orderSuccess, payOrder, refundOrder, refundStatus, registerOrder, removeOrder, transactionStatus, updateOrder } from './order.entity';
+
+export default function order() {
+
+  /**
+   * POST /order
+   * @description this route is insert a order
+   * @response the order.
+   */
+  this.route.post('/order', auth, registerOrder(this));
+
+  /**
+   * PATCH payorder/:id
+   * @description this route is used to pay for a pending order
+   * @response the order.
+   */
+  this.route.get('/payorder/:id', payOrder(this));
+
+  /**
+   * the below POST routes are for ssl commerz post request
+   * @description this routes updates the order or deletes them if transaction fails
+   * @response the order.
+   */
+  this.route.post('/ordersuccess/:id', orderSuccess(this));
+
+  this.route.post('/orderfail/:id', orderFail(this));
+
+  /**
+   * POST /refundorder/:id
+   * @description this route is insert a order
+   * @response the order.
+   */
+  this.route.post('/refundorder/:id', auth, checkRole(['admin', 'super-admin']), refundOrder(this));
+
+  /**
+   * POST /refundstatus/:id
+   * @description this route is insert a order
+   * @response the order.
+   */
+  this.route.get('/refundstatus/:id', auth, refundStatus(this));
+
+  /**
+   * POST /transactionstatus/:id
+   * @description this route is insert a order
+   * @response the order.
+   */
+  this.route.get('/transactionstatus/:id', auth, checkRole(['admin', 'super-admin']), transactionStatus(this));
+  /**
+   * GET /order
+   * @description this route is used to get all orders.
+   * @response all the orders.
+   */
+  this.route.get('/order', auth, getAllOrders(this));
+
+  /**
+ * GET /userorder/:id
+ * @description this route is used to get order of a user.
+ * @response all the orders user is looking for.
+ */
+  this.route.get('/userorder/me', auth, getUserOrder(this));
+
+  /**
+   * GET /order/:id
+   * @description this route is used to get a single order.
+   * @response the order that the user is looking for.
+   */
+  this.route.get('/order/:id', auth, getSingleOrder(this));
+
+  /**
+   * PATCH /order/:id
+   * @response the order that has been updated.
+   * @description this route is used to update a single order.
+   */
+  this.route.patch('/order/:id', auth, checkAccess('staff', 'order'), updateOrder(this));
+
+  /**
+   * GET /getcustomer
+   * @response the order that has been updated.
+   * @description this route is used to update a single order.
+   */
+  this.route.get('/getcustomer', auth, checkRole(['admin', 'super-admin']), getCustomer(this));
+
+  /**
+   * DELETE /deleteorder/:id
+   * @description this route is used to delete a single product.
+   * @response success or failed
+   */
+  this.route.delete('/deleteorder', auth, checkRole(['admin', 'super-admin']), removeOrder(this));
+  /**
+  * GET /overview
+  * @response This route is used to get dashboard overview data.
+  * @description this route is used to update a single order.
+  */
+  this.route.get('/overview', auth, checkRole(['admin', 'super-admin']), getOverView(this));
+  /**
+  * GET /overview
+  * @response This route is used to get dashboard overview data.
+  * @description this route is used to update a single order.
+  */
+  this.route.get('/chart', auth, checkRole(['admin', 'super-admin']), chartData(this));
+}

@@ -1,0 +1,34 @@
+{
+  "port": 4000,
+  "domain": "http://localhost:4000/api/",
+  "origin": [
+    "http://localhost:5173"
+  ],
+  "frontendURL": "http://localhost:5173/",
+  "useHTTP2": false,
+  "SMTP_HOST": "smtp.gmail.com",
+  "SMTP_PORT": "465",
+  "SMTP_USER": "f0493409@gmail.com",
+  "SMTP_PASSWORD": "krlvlruwshfymdxl",
+  "EMAIL_NAME": "f0493409@gmail.com",
+  "EMAIL_FROM": "f0493409@gmail.com",
+  "MONGODB_URL": "mongodb+srv://yeasirhossain:cvY9FEPZLIubEfwf@packerscluster.qksweok.mongodb.net/?retryWrites=true&w=majority",
+  "secret": "coredevs",
+  "oauth": {
+    "google": {
+      "clientID": "34420131839-07omclhoji3bgp2tl5mft3n0lphefaic.apps.googleusercontent.com",
+      "clientSecret": "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",
+      "callbackURL": "http://localhost:4000/api/google/callback"
+    },
+    "facebook": {
+      "appID": "613842847587596",
+      "appSecret": "8205ddaac657345bf7d327d176302f80",
+      "callbackURL": "http://localhost:4000/api/facebook/callback"
+    }
+  },
+  "sslcommerz": {
+    "store_id": "yeasi64c7803069071",
+    "store_password": "yeasi64c7803069071@ssl",
+    "is_live": false
+  }
+}

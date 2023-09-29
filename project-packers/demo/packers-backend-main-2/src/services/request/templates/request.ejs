@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>Request Mail</title>
+
+<body>
+  <div style="width: 100%; max-width: 600px; margin: 0 auto; padding: 20px; background-color: #124E58;">
+    <table style="width: 100%; max-width: 600px; margin: 0 auto; padding: 20px; background-color: white;">
+      <tr>
+        <td>
+          <img src='<%= toplogo %>' alt="" style="max-width: 100%; height: auto; display: block;" />
+        </td>
+        <td>
+          <% const date=new Date(request.createdAt); %>
+            <% const formattedDate=date.toLocaleDateString('en-US', { month: 'long' , day: 'numeric' , year: 'numeric'
+              });%>
+              <p style="text-align: right;">
+                <%= formattedDate %>
+              </p>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <table style="width: 100%; border-collapse: collapse; border-spacing: 0; margin-top: 5px;">
+            <thead style="font-size: 14px; color: #124E58; font-weight: 600;">
+              <tr>
+                <td style=" text-align: left; border-bottom: 1px solid #e2e8f0;">Requested Item</td>
+                <td style=" text-align: right; border-bottom: 1px solid #e2e8f0;">Qty</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom: 1px solid #e2e8f0;">
+                <td style="padding: 8px; text-align: left;">
+                  <div style="display: flex; align-items: center;">
+                    <img src='<%= serverLink + request.images[0] %>' alt=""
+                      style="width: 64px; height: 64px; border-radius: 0.25rem;" />
+                    <p style="font-size: 16px; font-weight: normal; max-width: 250px; margin-left: 8px;">
+                      <%= request.name %>
+                    </p>
+                  </div>
+                </td>
+                <td style="text-align: right; padding-right: 5px;">
+                  <%= request.quantity %>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          <table style="width: 100%; border-collapse: collapse; border-spacing: 0;">
+            <tbody>
+              <tr style="border-bottom: 1px solid #e2e8f0;">
+                <td style="padding: 16px; text-align: left;">Seller Takes</td>
+                <td style="text-align: right;">৳ <%= request.sellerTakes * request.quantity %> tk</td>
+              </tr>
+              <tr style="border-bottom: 1px solid #e2e8f0;">
+                <td style="padding: 16px; text-align: left;">Seller Taxes</td>
+                <td style="text-align: right;">৳ <%= request.tax * request.quantity%> tk</td>
+              </tr>
+              <tr style="border-bottom: 1px solid #e2e8f0;">
+                <td style="padding: 16px; text-align: left;">Packers Fee</td>
+                <td style="text-align: right;">৳ <%= request.fee * request.quantity %> tk</td>
+              </tr>
+              <tr>
+                <td style="padding: 16px; text-align: left; font-weight: bold;">Estimated total</td>
+                <td style=" text-align: right; font-size: 24px; font-weight: bold;">৳
+                  <%= (request.sellerTakes+request.tax+request.fee) * request.quantity %> tk
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align: center; margin-top: 16px; margin-bottom: 16px;">
+            <a href='<%= declineLink %>' style="text-decoration: none; cursor: pointer;">
+              <button
+                style="background-color: #F2C852; color: #0D3D4B; padding: 12px 14px; border-radius: 50px; width: 100%; font-size: 14px; font-weight: bold; ">
+                Decline Request
+              </button>
+            </a>
+          </p>
+        </td>
+        <td>
+          <p style="text-align: center; margin-top: 16px; margin-bottom: 16px;">
+            <a href='<%= acceptLink %>' style="text-decoration: none; cursor: pointer;">
+              <button
+                style="background-color: #F2C852; color: #0D3D4B; padding: 12px 14px; border-radius: 50px; width: 100%; font-size: 14px; font-weight: bold;">
+                Accept Request
+              </button>
+            </a>
+          </p>
+        </td>
+      </tr>
+    </table>
+    <table style="width: 100%; max-width: 600px; margin: 0 auto; padding-top: 20px;">
+      <tr>
+        <td style="text-align: center;">
+          <img src='<%= whitelogo %>' alt="" style="max-width: 100%; height: auto;" />
+        </td>
+      </tr>
+    </table>
+  </div>
+</body>
+
+</html>

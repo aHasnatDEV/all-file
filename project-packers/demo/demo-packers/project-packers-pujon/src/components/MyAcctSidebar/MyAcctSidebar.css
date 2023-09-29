@@ -1,0 +1,5 @@
+.sidebar .active {
+	background-color: #f2c852;
+	color: black;
+	transition: all 0.8s;
+}

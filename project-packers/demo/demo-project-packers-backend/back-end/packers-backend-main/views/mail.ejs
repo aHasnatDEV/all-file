@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>OTP MAIL</title>
+
+<body>
+
+  <div style="width: 100%; max-width: 600px; margin: 0 auto; padding: 20px; background-color: #124E58;">
+    <table style="width: 100%; max-width: 600px; margin: 0 auto; padding: 20px; background-color: white;">
+      <tr>
+        <td>
+          <img src='<%= toplogo %>' alt="" style="max-width: 100%; height: auto; display: block;" />
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" style="text-align: center;">
+          <p style="font-size: 34px; color: #124E58; margin-bottom: 20px; font-weight: 700;">
+            Password Reset
+          </p>
+          <p style="font-size: 16px; margin-bottom: 20px; font-weight: 500; ">
+            We have received a request to reset your password. If you have not requested to do so please ignore and
+            nothing will happen.
+          </p>
+          <p style="font-size: 16px;margin-top: 10px; margin-bottom: 20px; font-weight: 500; ">
+            Here is your otp, if you want to reset you password.
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" style="text-align: center;">
+          <p style="font-size: 30px; color: #124E58; margin-bottom: 20px; font-weight: 700;">
+            YOUR OTP CODE
+          </p>
+          <p style="font-size: 26px; color: #124E58; margin-bottom: 20px; font-weight: 600;">
+            <%= otp %>
+          </p>
+          <p style="font-size: 16px; margin-bottom: 20px; font-weight: 500; text-align: center;">
+            The otp will be valid for the next 5 minutes.
+          </p>
+        </td>
+      </tr>
+    </table>
+    <table style="width: 100%; max-width: 600px; margin: 0 auto; padding-top: 20px;">
+      <tr>
+        <td style="text-align: center;">
+          <img src='<%= whitelogo %>' alt="" style="max-width: 100%; height: auto;" />
+        </td>
+      </tr>
+    </table>
+  </div>
+</body>
+
+</html>

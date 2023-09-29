@@ -1,0 +1,55 @@
+/* fonts  */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+html {
+	scroll-behavior: smooth;	
+}
+
+.no-scroll {
+	overflow: hidden;
+}
+
+.wrapper {
+	@apply max-w-screen-xl mx-auto px-2 md:px-5;
+}
+
+.backgroundImage {
+	@apply bg-no-repeat bg-[length:375px_276px] md:bg-[length:100%_600px] bg-black/60 bg-blend-overlay bg-center;
+}
+
+/* width */
+::-webkit-scrollbar {
+	width: 0px;
+	height: 0;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: #888;
+	border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: #555;
+}
+input[type='tel']:focus {
+	outline: none !important;
+	border: none !important;
+	box-shadow: none !important;
+	/* background: #000; */
+}

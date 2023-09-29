@@ -1,0 +1,43 @@
+
+
+all components need to be done on client side
+
+Button(done)
+Modal(Done)---transition needed
+Responsive Navbar(Done)
+Footer(Done)
+FAQs(Done)
+Short video card(Done)
+Blog Card(Done)
+Product Card(Done)
+Heading(Done)
+titleBar(Done)
+AboutFAQs(Done)
+Notification Dropdown(Done)---(need to close when click outside funtion)
+Card Dropdown(Done)---(need to close when click outside funtion)
+Notification Card(Done)
+Cart Card(Done)
+
+
+all components that need to be done on admin side
+overview card(Done)
+status button(Done)
+chatBox(Done)
+chat(Done)
+CahtJoin(Done)
+role card(Done)---responsive needed
+Popup card(Done)---transition needed
+Table
+
+
+
+
+
+---------------------------
+status==>
+1.Abandoned/paid
+2.Estimate Sent
+3.Closed/refund processing
+4.Pending/processing
+5.Completed
+--------------------------

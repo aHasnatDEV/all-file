@@ -1,0 +1,248 @@
+/* CSS for ConfirmationTemplate component
+
+.container {
+	width: 600px;
+	background-color: #124e58;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 16px;
+	padding-right: 16px;
+	padding-top: 16px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.card {
+	background-color: #fff;
+	padding: 20px;
+	border-radius: 4px;
+}
+
+.flex {
+	display: flex;
+}
+
+.justify-between {
+	justify-content: space-between;
+}
+
+.items-center {
+	align-items: center;
+}
+
+.flex-col {
+	flex-direction: column;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.flex-wrap {
+	flex-wrap: wrap;
+}
+
+
+.text-32 {
+	font-size: 32px;
+}
+
+.font-bold {
+	font-weight: bold;
+}
+
+.text-primary {
+	color: #0d3d4b;
+}
+
+.text-slate-600 {
+	color: #6b7280;
+}
+
+.text-base {
+	font-size: 16px;
+}
+
+.text-lg {
+	font-size: 18px;
+}
+
+.text-sm {
+	font-size: 14px;
+}
+
+.font-semibold {
+	font-weight: 600;
+}
+
+
+.mb-6 {
+	margin-bottom: 24px;
+}
+
+.mt-2 {
+	margin-top: 8px;
+}
+
+.mt-4 {
+	margin-top: 16px;
+}
+
+.mb-8 {
+	margin-bottom: 32px;
+}
+
+.mr-2 {
+	margin-right: 8px;
+}
+
+.mr-4 {
+	margin-right: 16px;
+}
+
+.mr-5 {
+	margin-right: 20px;
+}
+
+.mt-45 {
+	margin-top: 45px;
+}
+
+
+.button {
+	display: inline-block;
+	padding: 12px 14px;
+	border-radius: 50px;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+	cursor: pointer;
+}
+
+.bg-yellow {
+	background-color: #f2c852;
+}
+
+.text-primary {
+	color: #0d3d4b;
+}
+
+
+.grid {
+	display: grid;
+}
+
+.grid-cols-2 {
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+
+.table {
+	display: table;
+	width: 100%;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.thead {
+	display: table-header-group;
+	vertical-align: middle;
+	border-color: inherit;
+}
+
+.tbody {
+	display: table-row-group;
+	vertical-align: middle;
+	border-color: inherit;
+}
+
+.tr {
+	display: table-row;
+	vertical-align: inherit;
+	border-color: inherit;
+}
+
+.th {
+	display: table-cell;
+	padding: 8px;
+	text-align: left;
+	vertical-align: middle;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #d1d5db;
+	font-size: 14px;
+	font-weight: 600;
+	color: #124e58;
+}
+
+.td {
+	display: table-cell;
+	padding: 8px;
+	text-align: left;
+	vertical-align: middle;
+	font-size: 14px;
+	color: #124e58;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #d1d5db;
+}
+
+
+.border {
+	border-width: 1px;
+	border-style: solid;
+}
+
+.space-y-2 > * + * {
+	margin-top: 0.5rem;
+}
+
+.hidden {
+	display: none;
+}
+
+.col {
+	display: table-cell;
+}
+
+
+.width-347 {
+	width: 347px;
+}
+
+.width-full {
+	width: 100%;
+}
+
+
+.p-12-14 {
+	padding: 12px 14px;
+}
+
+.py-4 {
+	padding-top: 16px;
+	padding-bottom: 16px;
+}
+
+
+.height-full {
+	height: 100%;
+}
+
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+
+.rounded-50 {
+	border-radius: 50px;
+}
+
+
+@media (min-width: 768px) {
+	.hidden-md-block {
+		display: block;
+	}
+} */

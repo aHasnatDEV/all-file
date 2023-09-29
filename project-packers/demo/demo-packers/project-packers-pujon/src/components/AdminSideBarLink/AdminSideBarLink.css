@@ -1,0 +1,12 @@
+.activeLinkStyle_1 {
+	background-color: #f2c852;
+	width: 4px;
+	height: 40px;
+	border-radius: 3px;
+}
+
+.activeLinkStyle_2 {
+	background-color: #0d3d4b;
+	color: white;
+	border-radius: 4px;
+}
